@@ -1,8 +1,903 @@
-Sanket Sawant
-Software Developer
-Email: kanak.sanket@gmail.com
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-Welcome to my personal site! I specialize in building robust applications, system architectures, and digital tools.
+    <title>Sanket Sawant | Software & Android Developer</title>
 
-Contact: kanak.sanket@gmail.com
-GitHub: https://kanaksank.github.io
+    <meta name="description"
+          content="Sanket Sawant is a software developer building Android applications, robust systems, and digital tools using Flutter, Dart, .NET, and SQL Server.">
+
+    <meta name="theme-color" content="#07172f">
+
+    <style>
+        :root {
+            --background: #07172f;
+            --surface: #0c2242;
+            --primary: #12b9f5;
+            --secondary: #7c83ff;
+            --text: #f1f7ff;
+            --muted: #b7c8df;
+            --border: #203e63;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 85px;
+        }
+
+        body {
+            font-family: "Segoe UI", Arial, sans-serif;
+            background: var(--background);
+            color: var(--text);
+            line-height: 1.7;
+        }
+
+        a {
+            color: inherit;
+        }
+
+        .container {
+            width: min(1100px, 90%);
+            margin: auto;
+        }
+
+        /* Navigation */
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(7, 23, 47, 0.96);
+            border-bottom: 1px solid var(--border);
+        }
+
+        nav {
+            min-height: 72px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: 800;
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: var(--primary);
+        }
+
+        .nav-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--muted);
+            font-size: 14px;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        /* Hero */
+
+        .hero {
+            padding: 90px 0;
+            background:
+                radial-gradient(ellipse at 85% 30%,
+                    #123e79 0%, transparent 45%),
+                linear-gradient(120deg, #091a34, #0a2041);
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.25fr 0.75fr;
+            align-items: center;
+            gap: 55px;
+        }
+
+        .eyebrow {
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-weight: 700;
+            font-size: 13px;
+        }
+
+        h1 {
+            font-size: clamp(38px, 6vw, 62px);
+            line-height: 1.15;
+            margin: 15px 0;
+            letter-spacing: -1.5px;
+        }
+
+        h1 span {
+            color: var(--primary);
+        }
+
+        .role {
+            font-size: 21px;
+            color: #b7d9ff;
+            margin-bottom: 20px;
+        }
+
+        .intro {
+            max-width: 610px;
+            color: var(--muted);
+            font-size: 17px;
+            margin-bottom: 25px;
+        }
+
+        .email-link {
+            display: inline-block;
+            color: #77d9ff;
+            text-decoration: none;
+            margin-bottom: 24px;
+            overflow-wrap: anywhere;
+        }
+
+        .email-link:hover {
+            text-decoration: underline;
+        }
+
+        .buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 13px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 11px 23px;
+            border: 1px solid var(--primary);
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.25s;
+        }
+
+        .btn-primary {
+            color: #03172c;
+            background: var(--primary);
+        }
+
+        .btn-outline {
+            color: var(--text);
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 24px #0004;
+        }
+
+        /* Developer illustration */
+
+        .hero-art {
+            text-align: center;
+        }
+
+        .phone {
+            width: min(270px, 100%);
+            margin: auto;
+            padding: 18px;
+            border: 3px solid #248ed1;
+            border-radius: 35px;
+            background: linear-gradient(160deg, #132f54, #061328);
+            box-shadow: 0 20px 60px #0005;
+            transform: rotate(3deg);
+        }
+
+        .phone-screen {
+            min-height: 310px;
+            border-radius: 23px;
+            border: 1px solid #274a72;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 18px;
+            padding: 20px;
+        }
+
+        .android-icon {
+            font-size: 75px;
+            line-height: 1.2;
+        }
+
+        .phone-screen h2 {
+            color: var(--primary);
+            font-size: 24px;
+        }
+
+        .phone-screen p {
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        /* Expertise */
+
+        .expertise {
+            padding: 35px 0;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+            background: #091b35;
+        }
+
+        .expertise-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 22px;
+        }
+
+        .expertise-item {
+            padding: 10px 15px;
+            border-left: 2px solid var(--border);
+        }
+
+        .expertise-item h3 {
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+
+        .expertise-item p {
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        .expertise-icon {
+            font-size: 27px;
+            margin-bottom: 8px;
+        }
+
+        /* General sections */
+
+        section.content-section {
+            padding: 75px 0;
+        }
+
+        .section-title {
+            font-size: 32px;
+            margin: 8px 0 12px;
+        }
+
+        .section-description {
+            color: var(--muted);
+            max-width: 700px;
+            margin-bottom: 30px;
+        }
+
+        /* About */
+
+        .about-card {
+            padding: 30px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 15px;
+        }
+
+        .about-card p {
+            color: var(--muted);
+            margin-bottom: 15px;
+        }
+
+        .about-card p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Skills */
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+
+        .skill-card {
+            padding: 22px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+        }
+
+        .skill-card h3 {
+            color: var(--primary);
+            font-size: 17px;
+            margin-bottom: 10px;
+        }
+
+        .skill-card p {
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        /* Projects */
+
+        .projects {
+            background: #091b35;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .project-card {
+            display: flex;
+            flex-direction: column;
+            padding: 25px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 15px;
+            transition: transform 0.25s, border-color 0.25s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+        }
+
+        .project-icon {
+            font-size: 38px;
+            margin-bottom: 12px;
+        }
+
+        .project-card h3 {
+            font-size: 19px;
+            margin-bottom: 10px;
+        }
+
+        .project-card p {
+            color: var(--muted);
+            font-size: 14px;
+            margin-bottom: 18px;
+            flex-grow: 1;
+        }
+
+        .tag {
+            display: inline-block;
+            width: fit-content;
+            padding: 4px 12px;
+            margin-bottom: 15px;
+            border-radius: 20px;
+            background: #163b65;
+            color: #8de0ff;
+            font-size: 12px;
+        }
+
+        .project-link {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .project-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Contact */
+
+        .contact {
+            text-align: center;
+            background:
+                radial-gradient(ellipse at top, #123c70, transparent 70%),
+                #091b35;
+        }
+
+        .contact .section-description {
+            margin: 0 auto 25px;
+        }
+
+        .contact-details {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 25px;
+            margin-top: 25px;
+        }
+
+        .contact-details a {
+            color: #8edfff;
+            text-decoration: none;
+            overflow-wrap: anywhere;
+        }
+
+        .contact-details a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+
+        footer {
+            text-align: center;
+            padding: 25px 15px;
+            border-top: 1px solid var(--border);
+            color: #91a9c6;
+            font-size: 13px;
+        }
+
+        /* Mobile responsive layout */
+
+        @media (max-width: 850px) {
+            .hero-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .hero-art {
+                display: none;
+            }
+
+            .expertise-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .skills-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .project-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 560px) {
+            .container {
+                width: 92%;
+            }
+
+            nav {
+                flex-direction: column;
+                padding: 15px 0;
+            }
+
+            .nav-links {
+                justify-content: center;
+                gap: 14px;
+            }
+
+            .hero {
+                padding: 60px 0;
+            }
+
+            .expertise-grid,
+            .skills-grid,
+            .project-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .expertise-item {
+                padding: 12px;
+            }
+
+            section.content-section {
+                padding: 55px 0;
+            }
+
+            .section-title {
+                font-size: 27px;
+            }
+
+            .about-card {
+                padding: 22px;
+            }
+        }
+
+        /* Accessibility */
+
+        a:focus-visible {
+            outline: 3px solid #fff;
+            outline-offset: 4px;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+
+            *,
+            *::before,
+            *::after {
+                transition: none !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <nav class="container">
+        <a href="#home" class="logo">
+            Sanket <span>Sawant</span>
+        </a>
+
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+</header>
+
+<main>
+    <section class="hero" id="home">
+        <div class="container hero-grid">
+
+            <div>
+                <p class="eyebrow">Software Developer</p>
+
+                <h1>Sanket <span>Sawant</span></h1>
+
+                <p class="role">
+                    Software Developer | Android App Developer
+                </p>
+
+                <a class="email-link"
+                   href="mailto:kanak.sanket@gmail.com">
+                    ✉ kanak.sanket@gmail.com
+                </a>
+
+                <p class="intro">
+                    Welcome to my personal site! I specialize in
+                    building robust applications, system architectures,
+                    and digital tools. I enjoy creating efficient,
+                    scalable, and user-friendly solutions, especially
+                    Android apps that solve everyday problems.
+                </p>
+
+                <div class="buttons">
+                    <a class="btn btn-primary"
+                       href="mailto:kanak.sanket@gmail.com">
+                        Contact Me
+                    </a>
+
+                    <a class="btn btn-outline"
+                       href="https://kanaksank.github.io"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        View My GitHub
+                    </a>
+                </div>
+            </div>
+
+            <div class="hero-art" aria-hidden="true">
+                <div class="phone">
+                    <div class="phone-screen">
+                        <div class="android-icon">🤖</div>
+                        <h2>Build Awesome Apps</h2>
+                        <p>Ideas into digital solutions</p>
+                        <p>Flutter · Dart · Android</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="expertise">
+        <div class="container expertise-grid">
+
+            <article class="expertise-item">
+                <div class="expertise-icon">🤖</div>
+                <h3>Android Development</h3>
+                <p>
+                    Flutter, Dart, mobile UI, app architecture,
+                    and offline-first applications.
+                </p>
+            </article>
+
+            <article class="expertise-item">
+                <div class="expertise-icon">💻</div>
+                <h3>Backend & APIs</h3>
+                <p>
+                    C#, ASP.NET, REST APIs, SQL Server,
+                    and database integration.
+                </p>
+            </article>
+
+            <article class="expertise-item">
+                <div class="expertise-icon">🏗️</div>
+                <h3>System Design</h3>
+                <p>
+                    Maintainable code, scalable architecture,
+                    performance, and reliability.
+                </p>
+            </article>
+
+            <article class="expertise-item">
+                <div class="expertise-icon">🛠️</div>
+                <h3>Development Tools</h3>
+                <p>
+                    Git, GitHub, VS Code, Android Studio,
+                    debugging, and CI/CD workflows.
+                </p>
+            </article>
+
+        </div>
+    </section>
+
+    <section class="content-section" id="about">
+        <div class="container">
+
+            <p class="eyebrow">A Little About Me</p>
+            <h2 class="section-title">Turning ideas into applications</h2>
+
+            <div class="about-card">
+                <p>
+                    I enjoy developing software that combines practical
+                    functionality with a clean and intuitive user experience.
+                    My interests include Android application development,
+                    backend engineering, system architecture, and database
+                    optimization.
+                </p>
+
+                <p>
+                    I work with Flutter and Dart to build mobile apps and
+                    with .NET and SQL Server to develop robust application
+                    components and data-driven solutions.
+                </p>
+
+                <p>
+                    I am particularly interested in useful everyday apps,
+                    offline functionality, performance optimization,
+                    and continuously learning new technologies.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="content-section" id="skills">
+        <div class="container">
+
+            <p class="eyebrow">My Technical Stack</p>
+            <h2 class="section-title">Skills & Technologies</h2>
+
+            <p class="section-description">
+                Technologies I use and explore to build applications
+                and reliable software solutions.
+            </p>
+
+            <div class="skills-grid">
+
+                <article class="skill-card">
+                    <h3>📱 Mobile Development</h3>
+                    <p>
+                        Flutter, Dart, Android, responsive UI,
+                        app navigation, and local data storage.
+                    </p>
+                </article>
+
+                <article class="skill-card">
+                    <h3>⚙️ Backend Development</h3>
+                    <p>
+                        C#, ASP.NET, WebForms, Web APIs,
+                        application logic, and integration.
+                    </p>
+                </article>
+
+                <article class="skill-card">
+                    <h3>🗄️ Databases</h3>
+                    <p>
+                        Microsoft SQL Server, T-SQL,
+                        query optimization, indexing, and data modeling.
+                    </p>
+                </article>
+
+                <article class="skill-card">
+                    <h3>🔧 Developer Tools</h3>
+                    <p>
+                        Git, GitHub, VS Code, Android Studio,
+                        debugging, and version control.
+                    </p>
+                </article>
+
+                <article class="skill-card">
+                    <h3>📦 App Delivery</h3>
+                    <p>
+                        Android APK/AAB builds, release preparation,
+                        app signing, and Google Play publishing.
+                    </p>
+                </article>
+
+                <article class="skill-card">
+                    <h3>🚀 Engineering Practices</h3>
+                    <p>
+                        Reusable code, troubleshooting, performance
+                        improvement, and maintainable architecture.
+                    </p>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section projects" id="projects">
+        <div class="container">
+
+            <p class="eyebrow">Android Apps & Software</p>
+            <h2 class="section-title">Featured Projects</h2>
+
+            <p class="section-description">
+                A selection of mobile applications and software projects
+                focused on practical features and user experience.
+            </p>
+
+            <div class="project-grid">
+
+                <article class="project-card">
+                    <div class="project-icon">🔢</div>
+                    <span class="tag">Flutter · Game</span>
+                    <h3>2048: OG Neon Edition</h3>
+                    <p>
+                        An offline number-puzzle game featuring
+                        neon styling, multiple grid sizes,
+                        swipe controls, and high scores.
+                    </p>
+                    <a class="project-link"
+                       href="https://kanaksank.github.io"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        Explore my projects ↗
+                    </a>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-icon">💰</div>
+                    <span class="tag">Flutter · Finance</span>
+                    <h3>EMI Calculator</h3>
+                    <p>
+                        Calculate loan EMIs, view repayment schedules,
+                        evaluate part-payments, estimate interest savings,
+                        and export calculations to PDF.
+                    </p>
+                    <a class="project-link"
+                       href="https://github.com/kanaksank/EmiCalculator"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        View source code ↗
+                    </a>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-icon">🎱</div>
+                    <span class="tag">Flutter · Utility</span>
+                    <h3>Tambola Caller</h3>
+                    <p>
+                        A Housie and Tambola calling utility with
+                        voice announcements and printable ticket
+                        generation.
+                    </p>
+                    <a class="project-link"
+                       href="https://github.com/kanaksank/TambolaCaller"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        View source code ↗
+                    </a>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-icon">🚗</div>
+                    <span class="tag">Game Development</span>
+                    <h3>CityMadness</h3>
+                    <p>
+                        An experimental city-driving game project
+                        exploring interactive environments and
+                        driving gameplay.
+                    </p>
+                    <a class="project-link"
+                       href="https://github.com/kanaksank"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        Explore GitHub ↗
+                    </a>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-icon">🧩</div>
+                    <span class="tag">Puzzle Games</span>
+                    <h3>Casual Game Concepts</h3>
+                    <p>
+                        Puzzle and arcade game ideas including
+                        Bubble Shooter, One-Tap Runner, and
+                        Arrows Puzzle Escape.
+                    </p>
+                    <a class="project-link"
+                       href="https://github.com/kanaksank"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        Explore GitHub ↗
+                    </a>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-icon">🌐</div>
+                    <span class="tag">Software Engineering</span>
+                    <h3>Web & Backend Solutions</h3>
+                    <p>
+                        Application development, database-backed
+                        systems, API integration, and performance
+                        optimization using .NET technologies.
+                    </p>
+                    <a class="project-link"
+                       href="https://github.com/kanaksank"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        Explore GitHub ↗
+                    </a>
+                </article>
+
+            </div>
+
+        </div>
+    </section>
+
+    <section class="content-section contact" id="contact">
+        <div class="container">
+
+            <p class="eyebrow">Let's Connect</p>
+            <h2 class="section-title">
+                Have an idea or want to collaborate?
+            </h2>
+
+            <p class="section-description">
+                Feel free to reach out about software development,
+                Android apps, technical projects, or collaboration.
+            </p>
+
+            <a class="btn btn-primary"
+               href="mailto:kanak.sanket@gmail.com">
+                ✉ Send Me an Email
+            </a>
+
+            <div class="contact-details">
+                <a href="mailto:kanak.sanket@gmail.com">
+                    kanak.sanket@gmail.com
+                </a>
+
+                <a href="https://kanaksank.github.io"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    GitHub Portfolio ↗
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <p>
+        &copy; <span id="year">2026</span> Sanket Sawant.
+        All rights reserved.
+    </p>
+    <p>Built with HTML, CSS, and a passion for software development.</p>
+</footer>
+
+<script>
+    document.getElementById("year").textContent =
+        new Date().getFullYear();
+</script>
+
+</body>
+</html>
